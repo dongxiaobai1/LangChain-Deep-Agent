@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-
+import streamlit as st
 # 加载 .env 环境变量
 load_dotenv()
 
@@ -35,4 +35,5 @@ class Settings:
 # 实例化配置对象，方便其他模块直接 import settings
 
 settings = Settings()
+
 
