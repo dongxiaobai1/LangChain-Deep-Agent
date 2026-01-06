@@ -7,7 +7,7 @@ load_dotenv()
 
 class Settings:
     def __init__(self):
-        api_key = st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")
+        self.api_key = st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")
         self.base_url = os.getenv("OPENROUTER_BASE_URL")
         self.model_name = os.getenv("MODEL_NAME", "openai/gpt-4o")
 
@@ -35,3 +35,4 @@ class Settings:
 # 实例化配置对象，方便其他模块直接 import settings
 
 settings = Settings()
+
